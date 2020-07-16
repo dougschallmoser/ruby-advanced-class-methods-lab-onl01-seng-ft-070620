@@ -70,7 +70,7 @@ class Song
   end
 
   def self.alphabetical 
-    @@all.sort_by {|song| song.name}
+    self.all.sort_by {|song| song.name}
   end
 
   def self.new_from_filename(filename)
@@ -93,7 +93,6 @@ class Song
     song.artist_name = artist_name
     song.name = name 
     song.save 
-    song 
   end 
 
   def self.destroy_all
